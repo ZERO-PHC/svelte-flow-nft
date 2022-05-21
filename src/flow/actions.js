@@ -16,7 +16,10 @@ export const unauthenticate = () => fcl.unauthenticate()
 export const logIn = () => fcl.logIn()
 export const signUp = () => fcl.signUp()
 
-// init account
+
+
+
+
 export const initAccount = async () => {
   let transactionId = false;
   initTransactionState()
@@ -56,6 +59,7 @@ export const initAccount = async () => {
     console.log(e)
   }
 }
+
 
 // send a transaction to get a user's profile
 export const sendQuery = async (addr) => {

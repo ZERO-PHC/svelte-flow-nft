@@ -25,7 +25,7 @@ import Events from "./components/Events.svelte";
   }
   const handleClaimFloat = () => {
    
-    claimFLOAT("95244882", $user.addr)
+    claimFLOAT("95245163", $user.addr)
 
   }
 
@@ -35,18 +35,9 @@ import Events from "./components/Events.svelte";
   <div class="mb-2">
     {#if $user?.loggedIn && $profile}
       <Profile />
-    {:else}
-      <h1>Welcome to web3!</h1>
-      <p>
-        This is a starter app built on Flow. It demonstrates how to use the Flow
-        Client Library (FCL) with SvelteKit.
-      </p>
-      {#if !$user?.loggedIn}
-        <p>Login to get started.</p>
-      {:else}
-        <p>Create a profile and then click on Load Profile to see it here.</p>
-      {/if}
-    {/if}
+    {:else if !$user?.loggedIn}
+      <p>Login to get started.</p>
+    {:else}{/if}
   </div>
   <div>
     {#if $user?.loggedIn}
@@ -68,7 +59,7 @@ import Events from "./components/Events.svelte";
         <button on:click={signUp}>Sign Up</button>
       </div>
     {/if}
-    <Events  addressObject={$user?.loggedIn && $user.addr} />
-    <Floats  addressObject={$user?.loggedIn && $user.addr} />
+    <Events addressObject={$user?.loggedIn && $user.addr} />
+    <Floats addressObject={$user?.loggedIn && $user.addr} />
   </div>
 </div>

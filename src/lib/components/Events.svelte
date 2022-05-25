@@ -7,8 +7,13 @@
     let floatEvents = async () => {
     const rawEvents = await getEvents(addressObject);
     const formattedEvents = getEventsArray(rawEvents);
+
+    console.log("formattedEvents", formattedEvents)
+
     return formattedEvents || [];
   }
+
+
 
   function getEventsArray(floatEventsObj) {
     if (floatEventsObj && Object.keys(floatEventsObj)?.length > 0) {
@@ -29,7 +34,7 @@
         <div>{event.eventId}</div>
     {/each}
     {:else}
-      nop
+      noup
     {/if}
   {/await}
 </article>

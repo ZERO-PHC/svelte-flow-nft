@@ -18,7 +18,7 @@ export const draftFloat = writable({
     timelock: false,
     startTime: false,
     endTime: false,
-    quantity: 1,    
+    quantity: 2,    
     claimCodeEnabled: false,
     claimCode: '',
     transferrable: true,

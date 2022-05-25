@@ -13,21 +13,25 @@
           ...obj.float,
         };
       });
+
+      console.log("formatted floats", floatsFormatted)
+
       return floatsFormatted || [];
     };
+
 
 </script>
 
 <article>
   {#await floats()}
-    cargando
+    loading
   {:then floats}
     {#if floats.length > 0}
       {#each floats as float}
         <div>{float.id}</div>
       {/each}
     {:else}
-      nop
+      noup
     {/if}
   {/await}
 </article>

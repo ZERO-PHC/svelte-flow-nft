@@ -26,7 +26,7 @@
   {#await floats()}
     loading
   {:then floats}
-    {#if floats.length > 0}
+    {#if floats.length > 0 && metapandas.length > 0}
       {#each floats as float}
         <div>{float.id}</div>
       {/each}

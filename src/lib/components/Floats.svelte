@@ -14,7 +14,7 @@
         };
       });
 
-      console.log("formatted floats", floatsFormatted)
+      console.log("formatted floatss", floatsFormatted)
 
       return floatsFormatted || [];
     };

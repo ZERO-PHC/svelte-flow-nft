@@ -24,7 +24,7 @@
 
 <article>
   {#await floats()}
-    loading...
+    loading...3
   {:then floats}
     {#if floats.length > 0 && metapandas.length > 0}
       {#each floats as float}
